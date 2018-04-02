@@ -1,0 +1,8 @@
+>>> sum_of_digits(1325132435356)
+43
+>>> sum_of_digits(123)
+6
+>>> sum_of_digits(6)
+6
+>>> sum_of_digits(-10)
+1

@@ -1,0 +1,6 @@
+>>> palindrome(121)
+True
+>>> palindrome("kapak")
+True
+>>> palindrome("baba")
+False
