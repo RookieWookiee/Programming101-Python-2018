@@ -1,0 +1,8 @@
+>>> is_number_balanced(9)
+True
+>>> is_number_balanced(4518)
+True
+>>> is_number_balanced(28471)
+False
+>>> is_number_balanced(1238033)
+True

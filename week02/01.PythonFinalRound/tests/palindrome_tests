@@ -1,0 +1,8 @@
+>>> get_largest_palindrome(99)
+88
+>>> get_largest_palindrome(252)
+242
+>>> get_largest_palindrome(994687)
+994499
+>>> get_largest_palindrome(754649)
+754457

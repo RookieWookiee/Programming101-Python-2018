@@ -1,0 +1,8 @@
+>>> increasing_or_decreasing([1,2,3,4,5])
+Up!
+>>> increasing_or_decreasing([5,6,-10])
+False
+>>> increasing_or_decreasing([1,1,1,1])
+False
+>>> increasing_or_decreasing([9,8,7,6])
+Down!
