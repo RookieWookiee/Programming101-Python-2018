@@ -1,0 +1,16 @@
+>>> m = [list('ivan'), list('evnh'), list('inav'), list('mvvn'), list('qrit')]
+>>> count_occurences(m, 'ivan')
+3
+>>> m = [list('ivanqhrezgtzoym'),
+list('evnhtrxekydailc'),
+list('iactuallymcxrle'),
+list('mvcnpuamntlueaa'),
+list('qritweaquprxtuz'),
+list('peactuallywpytm'),
+list('oyhtrelufpqnzcs'),
+list('pactuallyureqar')]
+>>> count_occurences(m, 'actually')
+4
+>>> m = [list('zvanqhrezgtz'), list('evmhtrxekyma'), list('iacauallyacx'), list('mvcnduamdtlu'), list('qtitwaaauprx'), list('pemadamllywp'), list('oyhteelufpqn'), list('pactuallyure')]
+>>> count_occurences(m, 'madam')
+3
