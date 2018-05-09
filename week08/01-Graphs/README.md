@@ -1,28 +1,32 @@
-# Tasks
+## Slides
+
+https://slides.com/hackbulgaria/deck-113/#/
+
+## Tasks
 
 Every dictionary in the following tasks can have another dictionary as value or a iterable of dictionaries.
 
-## Task 1
+### Task 1
 
 Implement `deep_find(data, key)` which finds the given `key` in the `data` and returns it's value.
 
-## Task 2
+### Task 2
 
 Implement `deep_find_all(data, key)` which finds the given `key` in the `data` and returns array of the found values.
 
-## Task 3
+### Task 3
 
 Implement `deep_update(data, key, val)` which updates every occurance of the given `key` in the `data` with `val`.
 
-## Task 4
+### Task 4
 
 Implement `deep_apply(func, data)` which applies the given `func` to all **keys** from the given `data`.
 
-## Task 5
+### Task 5
 
 Implement `deep_compare(obj1, obj2)` where obj1 and obj2 can be `dict` or `iterable` and compares the given objects.
 
-## Task 6
+### Task 6
 
 Implement `schema_validator(schema: List, data: Dict)` which should assert that the given `data` keys are as the given `schema`.
 **Notes**
