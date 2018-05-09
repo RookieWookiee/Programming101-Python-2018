@@ -25,3 +25,69 @@ Your task is to write queries for:
 * Add new column `rating` which is number from 1 to 9. Insert values for every language.
 * For few languages (`Python` and `Go`) update answered value from 0 to 1
 * Select languages which answer is `200 OK` or `Lambda`.
+
+
+## Foreign Keys
+
+We have two type of keys - Primary (PK) and Foreign (FK).
+
+If a column is a PK for the table, it can hold only unique values. And one value from that column should be able to "identify" the entire row. If we search in the `WHERE` clause with a PK, we should always get 1 value.
+
+FK are different. They are used to express relations between two tables.
+
+In the previous examples, the `author` column was a FK column. `student_id` and `course_id` in the junction table are FKs too.
+
+Here is the deal with the FK:
+
+* This is a **constraint** over what values can be inserted in the column, defined as a foreign key.
+* Usually, when you define your table, you say that a given column is going to be a FK to another table's PK column.
+
+Lets see the SQL for that:
+
+Now, when you have the general idea, you can read more about FK's here - https://www.sqlite.org/foreignkeys.html
+
+
+
+Lets see the SQL for that:
+
+
+```sql
+CREATE TABLE Users(
+  user_id INTEGER PRIMARY KEY,
+  user_name TEXT,
+  user_email TEXT
+)
+
+CREATE TABLE Posts(
+  post_id INTEGER PRIMARY KEY,
+  post_title TEXT,
+  post_content TEXT,
+  author INTEGER,
+  FOREIGN KEY(author) REFERENCES Users(user_id)
+)
+```
+
+There is an additional `FOREIGN KEY` statement. This is the required thing.
+
+**Here is the SQL for the Student-Courses tables:**
+
+```sql
+CREATE TABLE Students(
+  student_id INTEGER PRIMARY KEY,
+  student_name TEXT
+)
+
+CREATE TABLE Courses(
+  course_id INTEGER PRIMARY KEY,
+  course_name TEXT
+)
+
+CREATA TABLE Student_To_Course(
+  student_id INTEGER,
+  course_id INTEGER,
+  FOREIGN KEY(student_id) REFERENCES Students(student_id),
+  FOREIGN KEY(course_id) REFERENCES Courses(course_id)
+)
+```
+
+Now, when you have the general idea, you can read more about FK's here - https://www.sqlite.org/foreignkeys.html
