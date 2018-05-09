@@ -1,5 +1,7 @@
 # First steps in Databases and SQL
 
+Presentation: http://slides.com/hackbulgaria/deck-78-114
+
 ## Tables, tables everywhere! SELECT, UPDATE, INSERT, DELETE
 
 Now, we know that our languages table looks like this:
