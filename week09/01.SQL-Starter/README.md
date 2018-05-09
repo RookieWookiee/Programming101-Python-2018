@@ -82,7 +82,7 @@ CREATE TABLE Courses(
   course_name TEXT
 )
 
-CREATA TABLE Student_To_Course(
+CREATE TABLE Student_To_Course(
   student_id INTEGER,
   course_id INTEGER,
   FOREIGN KEY(student_id) REFERENCES Students(student_id),
