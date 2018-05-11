@@ -1,5 +1,7 @@
 # JOIN, LEFT JOIN, GROUP BY, HAVING 
 
+Presentation: http://slides.com/hackbulgaria/sql-queries-and-join-115
+
 ## Заявки за базата от данни Movies
 
 • Напишете заявка, която извежда името на актьора и годината на първия филм, в който е участвал.
