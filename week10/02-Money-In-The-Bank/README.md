@@ -147,3 +147,15 @@ Implement a command, called ```get-tan``` that does the following thing:
 * Emails the user a list of 10 unique TAN codes, that he can use for his next 10 transactions
 * If the command is called again, it says : `You have 10 remaining TAN codes to use` where 10 can be any number between 1 and 10
 * If there are 0 TAN codes remaining, generate 10 new for that user and email them to him!
+
+
+## Useful links:
+ - Password Hashing - https://www.youtube.com/watch?v=DMtFhACPnTY&t=15s and https://www.youtube.com/watch?v=8ZtInClXe1Q&t=336s
+
+ - SQL injection - https://www.youtube.com/watch?v=_jKylhJtPmI
+
+ - Install postgres - https://kyup.com/tutorials/install-use-postgresql
+
+ - Python client for Postgres - http://initd.org/psycopg/docs/usage.html
+
+ - Link to `pgcli`(interactive shell for postgres) - https://github.com/dbcli/pgcli
