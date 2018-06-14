@@ -1,8 +1,38 @@
 from functools import reduce
 from collections import deque
 
-from hack101.firstday import palindrome, split_in_two, sum_of_digits
-from hack101.dive import group
+
+# ---- Helper functions ----
+def split_in_two(n):
+    n = str(n)
+    left_end = (len(n) + 1) // 2
+    right_start = len(n) // 2
+
+    return (n[:left_end], n[right_start:])
+
+def palindrome(n):
+    left, right = split_in_two(n)
+    return left == right[::-1]
+
+def sum_of_digits(n):
+    if type(n) is str:
+        n = int(n)
+    elif type(n) is list:
+        n = int(''.join(map(str, n)))
+
+    n = abs(n)
+    n = list(str(n))
+    return sum(map(int, n))
+
+def group(n):
+    def append_or_create(groups, x):
+        if len(groups) == 0 or groups[-1][0] != x:
+            groups.append([])
+        groups[-1].append(x)
+        return groups
+    
+    return reduce(append_or_create, n, [])
+# ---- End of Helper functions ----
 
 
 # Problem01
@@ -15,7 +45,6 @@ def is_number_balanced(n):
 
 # Problem02
 def increasing_or_decreasing(seq):
-    # skip(1)
     left_shifted = seq[1:]  # Shift to the left by one, no carry
 
     all_inc = all(x > seq[i] for i, x in enumerate(left_shifted))
