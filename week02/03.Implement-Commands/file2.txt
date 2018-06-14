@@ -1,0 +1,2 @@
+Emacs is an less awesome language!
+You should try it.

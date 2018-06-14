@@ -1,0 +1,2 @@
+Vim is an awesome language!
+You should try it.
