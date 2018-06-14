@@ -2,7 +2,7 @@ import hashlib
 import psycopg2
 from client import Client
 
-conn = psycopg2.connect("dbname=bank user=<some_username>")
+conn = psycopg2.connect("dbname=bank user=postgres")
 cursor = conn.cursor()
 
 
@@ -18,15 +18,15 @@ def create_clients_table():
 
 
 def change_message(new_message, logged_user):
-    update_sql = "UPDATE clients SET message = '%s' WHERE id = '%s'" % (new_message, logged_user.get_id())
-    cursor.execute(update_sql)
+    update_sql = "UPDATE clients SET message = %s WHERE id = %s"
+    cursor.execute(update_sql, (new_message, logger_user.get_id()))
     conn.commit()
     logged_user.set_message(new_message)
 
 
 def change_pass(new_pass, logged_user):
-    update_sql = "UPDATE clients SET password = '%s' WHERE id = '%s'" % (new_pass, logged_user.get_id())
-    cursor.execute(update_sql)
+    update_sql = "UPDATE clients SET password = %s WHERE id = %s"
+    cursor.execute(update_sql, (new_pass, logged_user.get_id()))
     conn.commit()
 
 
@@ -45,9 +45,9 @@ def register(username, password):
 def login(username, password):
     select_query = "SELECT id, username, balance, message FROM clients"
     cursor.execute(select_query)
-    select_query = "SELECT id, username, balance, message FROM clients WHERE username = '%s' AND password = '%s' LIMIT 1" % (username, password)
+    select_query = "SELECT id, username, balance, message FROM clients WHERE username = %s AND password = %s LIMIT 1"
 
-    cursor.execute(select_query)
+    cursor.execute(select_query, (username, query))
     user = cursor.fetchone()
 
     if(user):
