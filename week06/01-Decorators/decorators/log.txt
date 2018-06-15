@@ -1,0 +1,4 @@
+something_heavy was called and took 2.00 seconds to complete
+something_heavy was called and took 2.002187 seconds to complete
+something_heavy was called at 2018-04-16 20:21:03.899176
+something_heavy was called and took 2.00 seconds to complete
