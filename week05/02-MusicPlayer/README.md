@@ -14,10 +14,12 @@ Installing
 ----------
 
 Clone the repo, then: 
+
     $ pip3 install --editable .
     $ pip3 install -r requirements.txt
 
 Or alternatively make a virtual environment and use the install script:
+
     $ curl https://raw.githubusercontent.com/kernel-panic96/Programming101-Python-2018/my-solutions/week05/02-MusicPlayer/install.sh | bash
 
     

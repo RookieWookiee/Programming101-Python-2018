@@ -39,5 +39,5 @@ echo "./.$local_repo/$sub_dir"
 
 ln -s ./.$local_repo/$sub_dir/ $local_repo
 cd $local_repo
+pip3 install --user -r requirements.txt
 pip3 install --editable .
-pip3 install -r requirements.txt
